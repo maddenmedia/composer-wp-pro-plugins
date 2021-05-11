@@ -253,14 +253,14 @@ class Installer implements PluginInterface, EventSubscriberInterface {
 
 			case 'wp-all-import-pro':
 			case 'wp-all-export-pro':
-				$plugin = new Plugins\WpAiPro( $package->getPrettyVersion(), str_replace( "{$vendor}/", "", $package_name ) );
+				$plugin = new Plugins\WpAiPro( $package->getPrettyVersion(), $package_name );
 				break;
 
 			default:
 				if ( 0 === strpos( $package_name, 'gravityforms' ) ) {
-					$plugin = new Plugins\GravityForms( $package->getPrettyVersion(), str_replace( "{$vendor}/", "", $package_name ) );
+					$plugin = new Plugins\GravityForms( $package->getPrettyVersion(), $package_name );
 				} elseif ( 0 === strpos( $package_name, 'wpai-' ) ) {
-					$plugin = new Plugins\WpAiPro( $package->getPrettyVersion(), str_replace( "{$vendor}/", "", $package_name ) );
+					$plugin = new Plugins\WpAiPro( $package->getPrettyVersion(), $package_name );
 				}
 		}
 
