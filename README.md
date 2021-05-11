@@ -50,7 +50,7 @@ Add the following to your composer.json file:
   {
     "type": "package",
     "package": {
-      "name": "junaidbhura/advanced-custom-fields-pro",
+      "name": "wp-premium-plugin/advanced-custom-fields-pro",
       "version": "<version_number>",
       "type": "wordpress-plugin",
       "dist": {
@@ -58,14 +58,14 @@ Add the following to your composer.json file:
         "url": "https://www.advancedcustomfields.com"
       },
       "require": {
-          "junaidbhura/composer-wp-pro-plugins": "*"
+          "maddenmedia/composer-wp-pro-plugins": "*"
       }
     }
   },
   {
     "type": "package",
     "package": {
-      "name": "junaidbhura/gravityforms",
+      "name": "wp-premium-plugin/gravityforms",
       "version": "<version_number>",
       "type": "wordpress-plugin",
       "dist": {
@@ -73,14 +73,14 @@ Add the following to your composer.json file:
         "url": "https://www.gravityforms.com"
       },
       "require": {
-        "junaidbhura/composer-wp-pro-plugins": "*"
+        "maddenmedia/composer-wp-pro-plugins": "*"
       }
     }
   },
   {
     "type": "package",
     "package": {
-      "name": "junaidbhura/gravityformspolls",
+      "name": "wp-premium-plugin/gravityformspolls",
       "version": "<version_number>",
       "type": "wordpress-plugin",
       "dist": {
@@ -88,14 +88,14 @@ Add the following to your composer.json file:
         "url": "https://www.gravityforms.com"
       },
       "require": {
-        "junaidbhura/composer-wp-pro-plugins": "*"
+        "maddenmedia/composer-wp-pro-plugins": "*"
       }
     }
   },
   {
     "type": "package",
     "package": {
-      "name": "junaidbhura/polylang-pro",
+      "name": "wp-premium-plugin/polylang-pro",
       "version": "<version_number>",
       "type": "wordpress-plugin",
       "dist": {
@@ -103,14 +103,14 @@ Add the following to your composer.json file:
         "url": "https://www.polylang.pro"
       },
       "require": {
-        "junaidbhura/composer-wp-pro-plugins": "*"
+        "maddenmedia/composer-wp-pro-plugins": "*"
       }
     }
   },
   {
     "type": "package",
     "package": {
-      "name": "junaidbhura/wp-all-import-pro",
+      "name": "wp-premium-plugin/wp-all-import-pro",
       "version": "<version_number>",
       "type": "wordpress-plugin",
       "dist": {
@@ -118,14 +118,14 @@ Add the following to your composer.json file:
         "url": "https://www.wpallimport.com"
       },
       "require": {
-        "junaidbhura/composer-wp-pro-plugins": "*"
+        "maddenmedia/composer-wp-pro-plugins": "*"
       }
     }
   },
   {
     "type": "package",
     "package": {
-      "name": "junaidbhura/wp-all-export-pro",
+      "name": "wp-premium-plugin/wp-all-export-pro",
       "version": "<version_number>",
       "type": "wordpress-plugin",
       "dist": {
@@ -133,14 +133,14 @@ Add the following to your composer.json file:
         "url": "https://www.wpallimport.com"
       },
       "require": {
-        "junaidbhura/composer-wp-pro-plugins": "*"
+        "maddenmedia/composer-wp-pro-plugins": "*"
       }
     }
   },
   {
     "type": "package",
     "package": {
-      "name": "junaidbhura/wpai-acf-add-on",
+      "name": "wp-premium-plugin/wpai-acf-add-on",
       "version": "<version_number>",
       "type": "wordpress-plugin",
       "dist": {
@@ -148,19 +148,19 @@ Add the following to your composer.json file:
         "url": "https://www.wpallimport.com"
       },
       "require": {
-        "junaidbhura/composer-wp-pro-plugins": "*"
+        "maddenmedia/composer-wp-pro-plugins": "*"
       }
     }
   }
 ],
 "require": {
-  "junaidbhura/advanced-custom-fields-pro": "*",
-  "junaidbhura/gravityforms": "*",
-  "junaidbhura/gravityformspolls": "*",
-  "junaidbhura/polylang-pro": "*",
-  "junaidbhura/wp-all-import-pro": "*",
-  "junaidbhura/wp-all-export-pro": "*",
-  "junaidbhura/wpai-acf-add-on": "*"
+  "wp-premium-plugin/advanced-custom-fields-pro": "*",
+  "wp-premium-plugin/gravityforms": "*",
+  "wp-premium-plugin/gravityformspolls": "*",
+  "wp-premium-plugin/polylang-pro": "*",
+  "wp-premium-plugin/wp-all-import-pro": "*",
+  "wp-premium-plugin/wp-all-export-pro": "*",
+  "wp-premium-plugin/wpai-acf-add-on": "*"
 },
 ```
 
@@ -168,11 +168,11 @@ Add the following to your composer.json file:
 
 You can use any Gravity Forms add-on by simply adding it's slug like so:
 
-`junaidbhura/<plugin-slug>`
+`wp-premium-plugin/<plugin-slug>`
 
 For example:
 
-`junaidbhura/gravityformspolls`
+`wp-premium-plugin/gravityformspolls`
 
 Here's a list of all Gravity Forms add-on slugs: [https://docs.gravityforms.com/gravity-forms-add-on-slugs/](https://docs.gravityforms.com/gravity-forms-add-on-slugs/)
 
@@ -180,8 +180,8 @@ Here's a list of all Gravity Forms add-on slugs: [https://docs.gravityforms.com/
 
 You can use any WP All Import Pro add-on by simply adding it's slug like so:
 
-`junaidbhura/<plugin-slug>`
+`wp-premium-plugin/<plugin-slug>`
 
 For example:
 
-`junaidbhura/wpai-acf-add-on`
+`wp-premium-plugin/wpai-acf-add-on`
