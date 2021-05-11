@@ -237,27 +237,30 @@ class Installer implements PluginInterface, EventSubscriberInterface {
 	 */
 	protected function getDownloadUrl( PackageInterface $package ) {
 		$plugin       = null;
-		$package_name = $package->getName();
+		// $package_name = $package->getName();
+		$name         = explode('/', $package->getName() );
+		$vendor       = $name[0];
+		$package_name = $name[1];
 
 		switch ( $package_name ) {
-			case 'junaidbhura/advanced-custom-fields-pro':
+			case 'advanced-custom-fields-pro':
 				$plugin = new Plugins\AcfPro( $package->getPrettyVersion() );
 				break;
 
-			case 'junaidbhura/polylang-pro':
+			case 'polylang-pro':
 				$plugin = new Plugins\PolylangPro( $package->getPrettyVersion() );
 				break;
 
-			case 'junaidbhura/wp-all-import-pro':
-			case 'junaidbhura/wp-all-export-pro':
-				$plugin = new Plugins\WpAiPro( $package->getPrettyVersion(), str_replace( 'junaidbhura/', '', $package_name ) );
+			case 'wp-all-import-pro':
+			case 'wp-all-export-pro':
+				$plugin = new Plugins\WpAiPro( $package->getPrettyVersion(), str_replace( "{$vendor}/", "", $package_name ) );
 				break;
 
 			default:
-				if ( 0 === strpos( $package_name, 'junaidbhura/gravityforms' ) ) {
-					$plugin = new Plugins\GravityForms( $package->getPrettyVersion(), str_replace( 'junaidbhura/', '', $package_name ) );
-				} elseif ( 0 === strpos( $package_name, 'junaidbhura/wpai-' ) ) {
-					$plugin = new Plugins\WpAiPro( $package->getPrettyVersion(), str_replace( 'junaidbhura/', '', $package_name ) );
+				if ( 0 === strpos( $package_name, 'gravityforms' ) ) {
+					$plugin = new Plugins\GravityForms( $package->getPrettyVersion(), str_replace( "{$vendor}/", "", $package_name ) );
+				} elseif ( 0 === strpos( $package_name, 'wpai-' ) ) {
+					$plugin = new Plugins\WpAiPro( $package->getPrettyVersion(), str_replace( "{$vendor}/", "", $package_name ) );
 				}
 		}
 
