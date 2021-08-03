@@ -45,12 +45,22 @@ class GravityForms {
 	 * @return string
 	 */
 	public function getDownloadUrl() {
-		$http     = new Http();
-		$response = unserialize( $http->post( 'https://www.gravityhelp.com/wp-content/plugins/gravitymanager/api.php?op=get_plugin&slug=' . $this->slug . '&key=' . getenv( 'GRAVITY_FORMS_KEY' ) ) );
-		if ( ! empty( $response['download_url_latest'] ) ) {
-			return str_replace( 'http://', 'https://', $response['download_url_latest'] );
+		$http   = new Http();
+		$url    = 'https://www.gravityhelp.com/wp-content/plugins/gravitymanager/api.php?op=get_plugin&slug=' . $this->slug . '&key=' . getenv( 'GRAVITY_FORMS_KEY' );
+		$result = $http->post( $url );
+
+		if (false === $result) {
+			throw new Exception('Can\'t get correct download URL for ' . $url);
 		}
-		return '';
+
+		$body         = trim($result);
+		$response     = unserialize( $body );
+		$download_url = isset($response['download_url_latest']) ? $response['download_url_latest'] : '';
+
+		if (empty($download_url)) {
+				throw new Exception('Unable to find download URL. Check your Gravity Forms API key.');
+		}
+		return (string) $download_url;
 	}
 
 }

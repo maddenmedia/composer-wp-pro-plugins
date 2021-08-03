@@ -48,6 +48,10 @@ Add the following to your composer.json file:
 ```json
 "repositories": [
   {
+    "type": "vcs",
+    "url": "git@github.com:maddenmedia/composer-wp-pro-plugins"
+  },  
+  {
     "type": "package",
     "package": {
       "name": "wp-premium-plugin/advanced-custom-fields-pro",
