@@ -1,5 +1,5 @@
 {
-  "name": "maddenmedia/composer-wp-pro-plugins",
+  "name": "junaidbhura/composer-wp-pro-plugins",
   "type": "composer-plugin",
   "license": "MIT",
   "require": {
